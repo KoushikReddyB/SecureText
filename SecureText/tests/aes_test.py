@@ -1,4 +1,3 @@
-# tests/encryption/symmetric/aes_test_encryption.py
 from src.app.encryption.symmetric import aes as aes_encrypt
 from src.app.decryption.symmetric import aes as aes_decrypt
 from Crypto.Random import get_random_bytes
