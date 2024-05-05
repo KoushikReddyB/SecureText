@@ -3,7 +3,8 @@ from . import triple_des
 from . import blowfish
 from . import rc4
 from . import chacha20
+from . import cast128 
 
 DEFAULT_KEY_SIZE = 16
 
-__all__ = ['aes_decrypt', 'triple_des_decrypt', 'blowfish_decrypt', 'rc4_decrypt', 'chacha20_decrypt']
+__all__ = ['aes_decrypt', 'triple_des_decrypt', 'blowfish_decrypt', 'rc4_decrypt', 'chacha20_decrypt', 'cast128_decrypt']
