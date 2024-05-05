@@ -4,7 +4,7 @@ from Crypto.Random import get_random_bytes
 
 def test_blowfish():
     message = "Heyyy This is Blowfish Algorithm!"
-    key = get_random_bytes(16)  # 16 bytes for AES-128
+    key = get_random_bytes(16)  # 16 bytes 
 
     ciphertext, iv = blowfish_encrypt.encrypt_message(message, key)
     decrypted_message = blowfish_decrypt.decrypt_message(ciphertext, key, iv)
