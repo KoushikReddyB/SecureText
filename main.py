@@ -131,7 +131,7 @@ def switch_to_select_algorithm_page():
 def exit_window():
     stop_marquee()  # Stop the marquee before closing the window
     window.destroy()
-    
+
 # Example function for each algorithm
 def aes_function():
     print("You Selected AES Algorithm")
@@ -159,6 +159,7 @@ def rsa_function():
 
 def ecc_function():
     print("You selected ECC algorithm.")
+    subprocess.Popen(["python", "Algorithms/Asymmentric Algorithms/ecc_gui.py"])
 
 def camellia_function():
     print("You selected Camellia algorithm.")
