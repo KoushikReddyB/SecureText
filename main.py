@@ -152,6 +152,7 @@ def twofish_function():
 
 def chacha_function():
     print("You selected ChaCha2.0 algorithm.")
+    subprocess.Popen(["python", "Algorithms/Symmentric Algorithms/chacha20_gui.py"])
 
 def rsa_function():
     print("You selected RSA algorithm.")
