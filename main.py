@@ -1,9 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
+from Crypto.Cipher import AES
+from Crypto.Random import get_random_bytes
+from Crypto.Util.Padding import pad, unpad
+import base64
+import subprocess
 
-after_id = None  
+after_id = None
 footer_marquee_scroll_speed = 25  
-
+footer_marquee_text = "Made by @KoushikReddyB"
 def open_github(event):
     import webbrowser
     webbrowser.open("https://github.com/KoushikReddyB")
@@ -98,10 +103,35 @@ def switch_to_select_algorithm_page():
     back_button = ttk.Button(window, text="Back", command=go_back)
     back_button.place(relx=0.5, rely=0.6, anchor="center")
     window.geometry("800x450")
+    
+    # Marquee Text at the bottom of the window
+    marquee_text = "SecureText: A GUI python application developed by KoushikReddyB"
+    canvas_algo = tk.Canvas(window, width=800, height=20, bg="black", highlightthickness=0)
+    canvas_algo.place(relx=0.5, rely=1.0, anchor="s")
+    text_id_algo = canvas_algo.create_text(0, 10, anchor="w", text=marquee_text, fill="white", font="Calibri 10")
+
+    def start_marquee_algo(event=None):
+        canvas_algo.move(text_id_algo, -1, 0)
+        x1, _, x2, _ = canvas_algo.bbox(text_id_algo)
+        if x2 < 0: 
+            canvas_algo.move(text_id_algo, canvas_algo.winfo_width(), 0)  
+        global after_id
+        after_id = canvas_algo.after(footer_marquee_scroll_speed, start_marquee_algo)  
+
+    def stop_marquee_algo(event):
+        canvas_algo.after_cancel(after_id)
+
+    # Hover and Click Actions for Marquee on Select Algorithm Page
+    canvas_algo.bind("<Enter>", stop_marquee_algo)
+    canvas_algo.bind("<Leave>", start_marquee_algo) 
+
+    # Start Marquee on Select Algorithm Page
+    start_marquee_algo()
 
 # Example function for each algorithm
 def aes_function():
-    print("You selected AES algorithm.")
+    print("You Selected AES Algorithm")
+    subprocess.Popen(["python", "aes_gui.py"])
 
 def blowfish_function():
     print("You selected Blowfish algorithm.")
@@ -134,13 +164,13 @@ def sha1_function():
     print("You selected SHA1 algorithm.")
 
 def sha256_function():
-    print("You selected SHA256 algorithm.")
+    print("You selected SHA1 algorithm.")
 
 def sha512_function():
-    print("You selected SHA512 algorithm.")
+    print("You selected SHA1 algorithm.")
 
 def md5_function():
-    print("You selected MD5 algorithm.")
+    print("You selected SHA1 algorithm.")
 
 # Window 
 window = tk.Tk()
