@@ -2,8 +2,8 @@ import os
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes # type: ignore
+from cryptography.hazmat.backends import default_backend # type: ignore
 
 class ThreeDESApp:
     def __init__(self, master):
