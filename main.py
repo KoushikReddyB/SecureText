@@ -41,7 +41,6 @@ def switch_to_select_algorithm_page():
         ("Blowfish", blowfish_function),
         ("DES (Data Encryption Standard)", des_function),
         ("Triple DES (3DES)", des3_function),
-        ("Twofish", twofish_function),
         ("ChaCha2.0", chacha_function)
     ]
 
@@ -145,10 +144,6 @@ def des_function():
 def des3_function():
     print("You selected 3DES algorithm.")
     subprocess.Popen(["python", "Algorithms/Symmentric Algorithms/3des_gui.py"])
-
-def twofish_function():
-    print("You selected Twofish algorithm.")
-    subprocess.Popen(["python", "Algorithms/Symmentric Algorithms/twofish_gui.py"])
 
 def chacha_function():
     print("You selected ChaCha2.0 algorithm.")
