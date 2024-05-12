@@ -166,6 +166,7 @@ def idea_function():
 
 def sha1_function():
     print("You selected SHA1 algorithm.")
+    subprocess.Popen(["python", "Algorithms/Hashing Algorithms/sha1_gui.py"])
 
 def sha256_function():
     print("You selected SHA1 algorithm.")
