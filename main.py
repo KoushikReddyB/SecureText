@@ -6,6 +6,7 @@ from Crypto.Util.Padding import pad, unpad
 import base64
 import subprocess
 
+
 after_id = None
 footer_marquee_scroll_speed = 25  
 footer_marquee_text = "Made by @KoushikReddyB"
@@ -131,10 +132,11 @@ def switch_to_select_algorithm_page():
 # Example function for each algorithm
 def aes_function():
     print("You Selected AES Algorithm")
-    subprocess.Popen(["python", "Algorithms\\Symmentric Algorithms\\aes_gui.py"])
+    subprocess.Popen(["python", "Algorithms/Symmentric Algorithms/aes_gui.py"])
 
 def blowfish_function():
     print("You selected Blowfish algorithm.")
+    subprocess.Popen(["python", "Algorithms/Symmentric Algorithms/blowfish_gui.py"])
 
 def des_function():
     print("You selected DES algorithm.")
