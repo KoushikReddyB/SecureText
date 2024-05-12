@@ -169,13 +169,14 @@ def sha1_function():
     subprocess.Popen(["python", "Algorithms/Hashing Algorithms/sha1_gui.py"])
 
 def sha256_function():
-    print("You selected SHA1 algorithm.")
+    print("You selected SHA256 algorithm.")
+    subprocess.Popen(["python", "Algorithms/Hashing Algorithms/sha256_gui.py"])
 
 def sha512_function():
-    print("You selected SHA1 algorithm.")
+    print("You selected SHA512 algorithm.")
 
 def md5_function():
-    print("You selected SHA1 algorithm.")
+    print("You selected MD5 algorithm.")
 
 # Window 
 window = tk.Tk()
