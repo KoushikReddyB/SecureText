@@ -40,7 +40,7 @@ class AESApp:
         self.keygen_button = tk.Button(master, text="Key Generator", command=self.generate_key)
         self.keygen_button.grid(row=5, column=0, columnspan=2, padx=10, pady=5)
 
-        self.back_button = tk.Button(master, text="Back", command=self.clear_text)
+        self.back_button = tk.Button(master, text="Reset", command=self.clear_text)
         self.back_button.grid(row=6, column=0, padx=10, pady=5)
 
         self.exit_button = tk.Button(master, text="Exit", command=master.quit)
@@ -111,5 +111,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = AESApp(root)
     root.mainloop()
-
-

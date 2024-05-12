@@ -131,7 +131,7 @@ def switch_to_select_algorithm_page():
 # Example function for each algorithm
 def aes_function():
     print("You Selected AES Algorithm")
-    subprocess.Popen(["python", "aes_gui.py"])
+    subprocess.Popen(["python", "Algorithms\\Symmentric Algorithms\\aes_gui.py"])
 
 def blowfish_function():
     print("You selected Blowfish algorithm.")
