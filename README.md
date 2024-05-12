@@ -39,7 +39,7 @@ pip install -r requirements.txt
 1. Run the application:
 
 ```bash
-python securetext.py
+python main.py
 ```
 
 2. Upon launching the application, you will be presented with options to select different cryptographic algorithms.
