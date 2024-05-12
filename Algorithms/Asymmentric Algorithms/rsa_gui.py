@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
-from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives.asymmetric import rsa, padding
-from cryptography.hazmat.primitives import serialization, hashes
+from cryptography.hazmat.backends import default_backend # type: ignore
+from cryptography.hazmat.primitives.asymmetric import rsa, padding # type: ignore
+from cryptography.hazmat.primitives import serialization, hashes # type: ignore
 import base64
 
 class RSAApp:
