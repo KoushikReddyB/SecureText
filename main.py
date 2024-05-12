@@ -148,6 +148,7 @@ def des3_function():
 
 def twofish_function():
     print("You selected Twofish algorithm.")
+    subprocess.Popen(["python", "Algorithms/Symmentric Algorithms/twofish_gui.py"])
 
 def chacha_function():
     print("You selected ChaCha2.0 algorithm.")
