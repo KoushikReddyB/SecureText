@@ -174,6 +174,7 @@ def sha256_function():
 
 def sha512_function():
     print("You selected SHA512 algorithm.")
+    subprocess.Popen(["python", "Algorithms/Hashing Algorithms/sha512_gui.py"])
 
 def md5_function():
     print("You selected MD5 algorithm.")
