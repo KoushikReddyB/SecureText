@@ -144,6 +144,7 @@ def des_function():
 
 def des3_function():
     print("You selected 3DES algorithm.")
+    subprocess.Popen(["python", "Algorithms/Symmentric Algorithms/3des_gui.py"])
 
 def twofish_function():
     print("You selected Twofish algorithm.")
