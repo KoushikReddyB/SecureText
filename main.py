@@ -178,6 +178,7 @@ def sha512_function():
 
 def md5_function():
     print("You selected MD5 algorithm.")
+    subprocess.Popen(["python", "Algorithms/Hashing Algorithms/sha512_gui.py"])
 
 # Window 
 window = tk.Tk()
