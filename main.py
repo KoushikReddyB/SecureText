@@ -37,7 +37,7 @@ def switch_to_select_algorithm_page():
 
     # Symmetric Encryption Algorithms
     symmetric_algorithms = [
-        ("AES (Advanced Encryption Standard)", aes_function),
+        ("AES (Advanced Encryption Standard)", aes_function), 
         ("Blowfish", blowfish_function),
         ("DES (Data Encryption Standard)", des_function),
         ("Triple DES (3DES)", des3_function),
@@ -128,6 +128,10 @@ def switch_to_select_algorithm_page():
     # Start Marquee on Select Algorithm Page
     start_marquee_algo()
 
+def exit_window():
+    stop_marquee()  # Stop the marquee before closing the window
+    window.destroy()
+    
 # Example function for each algorithm
 def aes_function():
     print("You Selected AES Algorithm")
@@ -151,6 +155,7 @@ def chacha_function():
 
 def rsa_function():
     print("You selected RSA algorithm.")
+    subprocess.Popen(["python", "Algorithms/Asymmentric Algorithms/rsa_gui.py"])
 
 def ecc_function():
     print("You selected ECC algorithm.")
@@ -217,6 +222,9 @@ canvas.bind("<Button-1>", open_github)
 
 # Start Marquee
 start_marquee() 
+
+# Stop the marquee when the window is closed
+window.protocol("WM_DELETE_WINDOW", exit_window)
 
 # Run
 window.mainloop()
