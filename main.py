@@ -48,7 +48,6 @@ def switch_to_select_algorithm_page():
     asymmetric_algorithms = [
         ("RSA (Rivest-Shamir-Adleman)", rsa_function),
         ("ECC (Elliptic Curve Cryptography)", ecc_function),
-        ("Camellia", camellia_function),
         ("IDEA (International Data Encryption Algorithm)", idea_function)
     ]
 
@@ -161,11 +160,9 @@ def ecc_function():
     print("You selected ECC algorithm.")
     subprocess.Popen(["python", "Algorithms/Asymmentric Algorithms/ecc_gui.py"])
 
-def camellia_function():
-    print("You selected Camellia algorithm.")
-
 def idea_function():
     print("You selected IDEA algorithm.")
+    subprocess.Popen(["python", "Algorithms/Asymmentric Algorithms/idea_gui.py"])
 
 def sha1_function():
     print("You selected SHA1 algorithm.")
