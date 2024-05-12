@@ -140,6 +140,7 @@ def blowfish_function():
 
 def des_function():
     print("You selected DES algorithm.")
+    subprocess.Popen(["python", "Algorithms/Symmentric Algorithms/des_gui.py"])
 
 def des3_function():
     print("You selected 3DES algorithm.")
