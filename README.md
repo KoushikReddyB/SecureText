@@ -48,6 +48,11 @@ python main.py
    
 4. Follow the on-screen instructions for each algorithm to encrypt, decrypt, or hash text.
 
+### Demo
+```
+https://www.youtube.com/watch?v=gg3G5wdCAJI
+```
+
 ### Contributing
 
 Contributions are welcome If you want to contribute to this project, please follow these steps:
